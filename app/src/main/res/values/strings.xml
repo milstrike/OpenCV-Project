@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">OpenCV-Project</string>
+    <string name="app_menu">Choose Mode:</string>
+    <string name="btn_circle_camera">Circle Recognition</string>
+</resources>
