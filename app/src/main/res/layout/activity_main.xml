@@ -22,4 +22,12 @@
         android:layout_marginTop="10dp"
         android:text="@string/btn_circle_camera"
         android:layout_below="@+id/app_menu"/>
+
+    <Button
+        android:id="@+id/btn_rectangle_camera"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/btn_rectangle_camera"
+        android:layout_below="@+id/btn_circle_camera"/>
 </RelativeLayout>

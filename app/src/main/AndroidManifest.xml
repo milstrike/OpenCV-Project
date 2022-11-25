@@ -17,18 +17,27 @@
         android:theme="@style/Theme.OpenCVProject"
         tools:targetApi="31">
         <activity
-            android:name=".CircleDetection"
-            android:screenOrientation="landscape"
+            android:name=".RectangleDetection"
+            android:exported="false"
             android:parentActivityName=".MainActivity"
-            android:exported="false">
+            android:screenOrientation="landscape">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".CircleDetection"
+            android:exported="false"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="landscape">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
             android:name=".MainActivity"
-            android:screenOrientation="portrait"
-            android:exported="true">
+            android:exported="true"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

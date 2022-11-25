@@ -9,7 +9,7 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button circleDetection;
+    private Button circleDetection, rectangleDetection;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,12 +21,18 @@ public class MainActivity extends AppCompatActivity {
 
     private void initLevel0(){
         circleDetection = findViewById(R.id.btn_circle_camera);
+        rectangleDetection = findViewById(R.id.btn_rectangle_camera);
     }
 
     @SuppressLint("ClickableViewAccessibility")
     private void initLevel1(){
         circleDetection.setOnTouchListener((view, motionEvent) -> {
             goToCircleCamera();
+            return false;
+        });
+
+        rectangleDetection.setOnTouchListener((view, motionEvent) -> {
+            goToRectangleCamera();
             return false;
         });
     }
@@ -37,5 +43,10 @@ public class MainActivity extends AppCompatActivity {
         startActivity(goCircleCamera);
     }
 
+    private void goToRectangleCamera(){
+        Intent goRectangleCamera = new Intent(MainActivity.this, RectangleDetection.class);
+        goRectangleCamera.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+        startActivity(goRectangleCamera);
+    }
 
 }
